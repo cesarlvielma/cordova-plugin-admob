@@ -4,7 +4,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="cordova-plugin-admob"
 	version="3.2.4">
-      
+
     <name>Cordova-Phonegap AdMob Plugin</name>
 	<description>The FASTEST and EASIEST TO USE Cordova Admob plugin for Android, iOS and Windows phone. Pure OpenSource. Allows preloading and automatic loading of interstitials and banners plus more. Works with Cordova, Phonegap, Intel XDK/Crosswalk, Ionic, Meteor and more.</description>
 	<author>Raymond Xie</author>
@@ -27,7 +27,7 @@
     <!-- android, now build with gradle instead of ant -->
     <platform name="android">
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" 
+            <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
                       android:name="com.google.android.gms.ads.AdActivity"
                       android:theme="@android:style/Theme.Translucent" />
           </config-file>
@@ -44,12 +44,12 @@
         </config-file>
         <source-file src="src/android/AdMob.java" target-dir="src/com/rjfun/cordova/plugin" />
 
-        <!-- cordova CLI using gradle and it's working well
-        <framework src="com.google.android.gms:play-services-ads:+" /> -->
+        <!-- cordova CLI using gradle and it's working well-->
+        <framework src="com.google.android.gms:play-services-ads:9.2.0" />
         <!-- but unfortunately, build.phonegap.com, Intel XDK, and some other tools still use ant -->
         <!-- dependency id="cordova-plugin-googleplayservices"/ -->
      </platform>
-     
+
      <!-- ios -->
      <platform name="ios">
          <config-file target="config.xml" parent="/*">
